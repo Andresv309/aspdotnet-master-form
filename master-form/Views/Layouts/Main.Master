@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="master_form.Views.Layouts.Main" %>
+
+  <!DOCTYPE html>
+
+  <html>
+
+  <head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="../Js/main.js" defer></script>
+
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+    <title>Master Form</title>
+  </head>
+
+  <body class="w-screen h-full min-w-full min-h-screen bg-slate-900 flex flex-col items-center overflow-hidden">
+    <div class="max-w-7xl w-full h-full flex flex-col">
+      <header class="h-14 py-2 px-4 flex items-center justify-between bg-white">
+        <div class="">Logo</div>
+
+        <nav class="flex items-center justify-between gap-2">
+
+          <div class="dropdown flex relative">
+            <button
+              class="dropdown-button flex items-center space-x-2 py-2 px-3 border-2 border-white/0 text-base hover:border-b-blue-500 hover:bg-blue-100/50 hover:cursor-pointer rounded"
+              type="button">
+              <span class="text-sm font-semi-bold">Fundamentos</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.63729 10.8472L3.48359 6.6935C3.28326 6.49317 3.28326 6.16839 3.48359 5.96808L3.96805 5.48362C4.16804 5.28363 4.49216 5.28324 4.69262 5.48276L8.00002 8.77466L11.3074 5.48276C11.5079 5.28324 11.832 5.28363 12.032 5.48362L12.5164 5.96808C12.7168 6.16841 12.7168 6.49319 12.5164 6.6935L8.36272 10.8472C8.16241 11.0475 7.83762 11.0475 7.63729 10.8472Z">
+                </path>
+              </svg>
+            </button>
+
+            <div class="dropdown-menu hidden">
+              <ul class="bg-white shadow-lg flex flex-col py-1 absolute top-full right-0 rounded-md"
+                style="min-width: 150px;" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <li>
+                  <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
+                    href="#" role="menuitem">Ciclo For</a>
+                </li>
+                <li>
+                  <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
+                    href="#" role="menuitem">Ciclo While</a>
+                </li>
+                <li>
+                  <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
+                    href="#" role="menuitem">Condicionales</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dropdown flex relative">
+            <button
+              class="dropdown-button flex items-center space-x-2 py-2 px-3 border-2 border-white/0 text-base hover:border-b-blue-500 hover:bg-blue-100/50 hover:cursor-pointer rounded"
+              type="button">
+              <span class="text-sm font-semi-bold">Colecciones</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.63729 10.8472L3.48359 6.6935C3.28326 6.49317 3.28326 6.16839 3.48359 5.96808L3.96805 5.48362C4.16804 5.28363 4.49216 5.28324 4.69262 5.48276L8.00002 8.77466L11.3074 5.48276C11.5079 5.28324 11.832 5.28363 12.032 5.48362L12.5164 5.96808C12.7168 6.16841 12.7168 6.49319 12.5164 6.6935L8.36272 10.8472C8.16241 11.0475 7.83762 11.0475 7.63729 10.8472Z">
+                </path>
+              </svg>
+            </button>
+
+            <div class="dropdown-menu hidden">
+              <ul class="bg-white shadow-lg flex flex-col py-1 absolute top-full right-0 rounded-md"
+                style="min-width: 150px;" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <li>
+                  <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
+                    href="#" role="menuitem">Listas</a>
+                </li>
+                <li>
+                  <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
+                    href="#" role="menuitem">Array List</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-2 py-2 px-3 border-2 border-white/0 text-base hover:border-b-blue-500 hover:bg-blue-100/50 hover:cursor-pointer rounded">
+            <a href="#" role="menuitem" class="text-sm font-semi-bold">
+              Vectores
+            </a>
+          </div>
+
+          <div class="flex items-center space-x-2 py-2 px-3 border-2 border-white/0 text-base hover:border-b-blue-500 hover:bg-blue-100/50 hover:cursor-pointer rounded">
+            <a href="#" role="menuitem" class="text-sm font-semi-bold">
+              Biblioteca
+            </a>
+          </div>
+
+        </nav>
+
+        <div class="dropdown flex relative">
+          <button
+            class="dropdown-button flex items-center py-2 px-3 border-2 border-black bg-white hover:bg-black text-black hover:text-white text-base rounded space-x-2"
+            type="button">
+            <span class="text-sm font-semi-bold">Usuario</span>
+          </button>
+
+          <div class="dropdown-menu hidden">
+            <ul class="bg-white shadow-lg flex flex-col py-1 absolute top-full right-0 rounded-md"
+              style="min-width: 150px" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+              <li>
+                <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
+                  href="#" role="menuitem">
+                  Perfil
+                </a>
+              </li>
+              <li>
+                <div class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
+                  role="menuitem">
+                  <span class="font-bold">Log out</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </header>
+
+      <main>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+      </main>
+    </div>
+  </body>
+
+  </html>
