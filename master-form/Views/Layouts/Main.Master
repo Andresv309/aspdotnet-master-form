@@ -10,24 +10,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script src="../Js/main.js" defer></script>
+    <link rel="stylesheet" href="../Styles/globals.css">
 
     <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server"></asp:ContentPlaceHolder>
 
     <title>Master Form</title>
   </head>
 
-  <body class="w-screen h-full min-w-full min-h-screen bg-slate-900 flex flex-col items-center overflow-hidden">
-    <div class="max-w-7xl w-full h-full flex flex-col">
-      <header class="h-14 py-2 px-4 flex items-center justify-between bg-white">
-        <div class="">Logo</div>
+  <body class="w-screen h-full min-w-full min-h-screen flex flex-col items-center overflow-x-hidden antialiased grainy">
+    <div class="max-w-screen-xl w-full h-full flex flex-col">
+      <header class="sticky inset-x-0 top-0 z-30 h-14 py-2 px-4 flex items-center justify-between w-full bg-white/75 border-b border-gray-200">
+        <div>
+          <a href="#" class="flex gap-4 items-center">
+            <svg width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64" xml:space="preserve"><path d="M35.978 63h-7.96a3.386 3.386 0 0 1-3.381-3.382v-1.982a26.38 26.38 0 0 1-5.559-2.306l-1.402 1.402a3.36 3.36 0 0 1-2.392.989h-.004a3.351 3.351 0 0 1-2.386-.99l-5.628-5.625a3.358 3.358 0 0 1-.989-2.395c0-.904.353-1.752.99-2.388l1.401-1.401a26.465 26.465 0 0 1-2.306-5.562h-1.98a3.385 3.385 0 0 1-3.381-3.382v-7.96a3.385 3.385 0 0 1 3.382-3.381H6.36a26.432 26.432 0 0 1 2.306-5.56l-1.401-1.401a3.358 3.358 0 0 1-.989-2.396c0-.904.353-1.752.99-2.388l5.628-5.627a3.347 3.347 0 0 1 2.385-.989h.004a3.36 3.36 0 0 1 2.392.989l1.402 1.402a26.385 26.385 0 0 1 5.559-2.306v-1.98A3.386 3.386 0 0 1 28.019 1h7.96a3.385 3.385 0 0 1 3.38 3.382v1.98a26.496 26.496 0 0 1 5.563 2.306l1.402-1.403a3.347 3.347 0 0 1 2.386-.989h.004a3.36 3.36 0 0 1 2.391.989l5.626 5.63c.636.633.989 1.481.989 2.385a3.358 3.358 0 0 1-.989 2.396l-1.4 1.402a26.403 26.403 0 0 1 2.304 5.559h1.982A3.385 3.385 0 0 1 63 28.019v7.96a3.385 3.385 0 0 1-3.382 3.381h-1.982a26.395 26.395 0 0 1-2.306 5.562l1.402 1.403c.636.634.989 1.482.989 2.386a3.358 3.358 0 0 1-.989 2.395l-5.626 5.626a3.36 3.36 0 0 1-2.391.989h-.004a3.351 3.351 0 0 1-2.387-.99l-1.401-1.401a26.567 26.567 0 0 1-5.563 2.309v1.979A3.385 3.385 0 0 1 35.98 63zm-17.066-9.919c.176 0 .353.046.512.14a24.399 24.399 0 0 0 6.459 2.68 1 1 0 0 1 .754.97v2.747c0 .762.62 1.382 1.382 1.382h7.96c.761 0 1.38-.62 1.38-1.382v-2.744a1 1 0 0 1 .752-.969 24.588 24.588 0 0 0 6.466-2.683 1 1 0 0 1 1.218.152l1.943 1.944c.26.26.604.402.974.402h.002c.37 0 .718-.143.977-.402l5.626-5.626c.26-.26.404-.608.403-.98 0-.368-.143-.714-.402-.971l-1.944-1.946a1 1 0 0 1-.152-1.218 24.435 24.435 0 0 0 2.678-6.463 1 1 0 0 1 .97-.754h2.747c.762 0 1.382-.62 1.382-1.382v-7.96c0-.761-.62-1.381-1.382-1.381H56.87a1 1 0 0 1-.969-.754 24.395 24.395 0 0 0-2.678-6.46.999.999 0 0 1 .152-1.218l1.943-1.944c.26-.26.404-.608.403-.98 0-.368-.143-.714-.402-.97l-5.627-5.633a1.373 1.373 0 0 0-.977-.402h-.002c-.37 0-.715.143-.972.402l-1.945 1.945a1 1 0 0 1-1.218.152 24.555 24.555 0 0 0-6.466-2.68 1 1 0 0 1-.752-.968V4.382C37.36 3.62 36.74 3 35.98 3h-7.96c-.762 0-1.382.62-1.382 1.382v2.745a1 1 0 0 1-.754.969 24.399 24.399 0 0 0-6.46 2.68 1 1 0 0 1-1.218-.153L16.262 8.68a1.373 1.373 0 0 0-.978-.402h-.002c-.369 0-.715.142-.972.401l-5.63 5.63c-.26.26-.403.605-.403.975s.143.718.402.979l1.944 1.943a1 1 0 0 1 .152 1.22 24.377 24.377 0 0 0-2.68 6.46 1 1 0 0 1-.968.752H4.383c-.762 0-1.382.62-1.382 1.382v7.96c0 .762.62 1.382 1.382 1.382h2.744a1 1 0 0 1 .969.752 24.534 24.534 0 0 0 2.68 6.465 1 1 0 0 1-.153 1.217L8.68 47.74c-.26.258-.402.604-.402.973-.002.371.142.719.402.98l5.629 5.626c.259.26.603.401.973.402h.002c.37 0 .718-.144.978-.402l1.943-1.945a.997.997 0 0 1 .707-.293zm6.725-45.954h.01-.01z"/><path d="M31.998 52.16c-11.116 0-20.16-9.045-20.16-20.161 0-11.117 9.044-20.161 20.16-20.161s20.16 9.044 20.16 20.161c0 11.116-9.044 20.16-20.16 20.16zm0-38.322c-10.014 0-18.16 8.147-18.16 18.161s8.146 18.16 18.16 18.16 18.16-8.146 18.16-18.16-8.146-18.161-18.16-18.161z"/><path d="M24.031 38.148a.993.993 0 0 1-.627-.221l-6.376-5.15a1.002 1.002 0 0 1 0-1.556l6.376-5.148a1 1 0 1 1 1.256 1.557l-5.412 4.369 5.412 4.371a1 1 0 0 1-.629 1.778zM30.164 38.148a1.002 1.002 0 0 1-.942-1.336l3.669-10.296a1 1 0 1 1 1.884.672l-3.668 10.296c-.147.41-.532.664-.943.664zM39.935 38.148a.999.999 0 0 1-.63-1.778l5.413-4.371-5.412-4.37a1 1 0 0 1 1.256-1.556l6.376 5.148a1 1 0 0 1 0 1.556l-6.376 5.15a.992.992 0 0 1-.627.221zM56.532 33.012a.978.978 0 0 1-.806-.42l-.014-.02a1 1 0 1 1 1.639-1.146 1.01 1.01 0 0 1-.24 1.402c-.176.124-.38.184-.579.184zM7.465 33.01a.984.984 0 0 1-.884-.544l-.01-.02a1 1 0 1 1 1.79-.894 1.01 1.01 0 0 1-.443 1.351c-.147.074-.3.108-.453.108zM31.997 57.545a.982.982 0 0 1-.864-.512l-.01-.02a.998.998 0 1 1 1.751-.962 1.008 1.008 0 0 1-.877 1.494zM31.998 8.477a.983.983 0 0 1-.83-.452l-.01-.016a1 1 0 0 1 1.68-1.086c.3.464.173 1.09-.291 1.39-.17.11-.36.164-.549.164zM49.463 15.194a.98.98 0 0 1-.777-.38l-.014-.017a1 1 0 1 1 1.578-1.229 1.003 1.003 0 0 1-.787 1.626zM14.536 15.193a.983.983 0 0 1-.864-.507l-.01-.018a.999.999 0 1 1 1.748-.97c.269.482.1 1.099-.384 1.368a1.005 1.005 0 0 1-.49.127zM49.463 50.83a.98.98 0 0 1-.777-.38l-.014-.018a1 1 0 1 1 1.578-1.229 1.003 1.003 0 0 1-.787 1.626zM14.536 50.828a.983.983 0 0 1-.864-.508l-.01-.017a.999.999 0 1 1 1.748-.971 1.004 1.004 0 0 1-.874 1.496z"/></svg>
+            <span class="font-bold text-lg">
+              EasyCode
+            </span>
+          </a>
+        </div>
 
-        <nav class="flex items-center justify-between gap-2">
+        <nav class="hidden sm:flex items-center justify-between gap-2 ">
 
           <div class="dropdown flex relative">
             <button
               class="dropdown-button flex items-center space-x-2 py-2 px-3 border-2 border-white/0 text-base hover:border-b-blue-500 hover:bg-blue-100/50 hover:cursor-pointer rounded"
               type="button">
-              <span class="text-sm font-semi-bold">Fundamentos</span>
+              <span class="text-sm">Fundamentos</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M7.63729 10.8472L3.48359 6.6935C3.28326 6.49317 3.28326 6.16839 3.48359 5.96808L3.96805 5.48362C4.16804 5.28363 4.49216 5.28324 4.69262 5.48276L8.00002 8.77466L11.3074 5.48276C11.5079 5.28324 11.832 5.28363 12.032 5.48362L12.5164 5.96808C12.7168 6.16841 12.7168 6.49319 12.5164 6.6935L8.36272 10.8472C8.16241 11.0475 7.83762 11.0475 7.63729 10.8472Z">
@@ -36,8 +44,8 @@
             </button>
 
             <div class="dropdown-menu hidden">
-              <ul class="bg-white shadow-lg flex flex-col py-1 absolute top-full right-0 rounded-md"
-                style="min-width: 150px;" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+              <ul class="bg-white shadow-lg flex flex-col py-1 absolute top-full right-0 rounded-md w-36"
+                role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                 <li>
                   <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
                     href="#" role="menuitem">Ciclo For</a>
@@ -56,9 +64,9 @@
 
           <div class="dropdown flex relative">
             <button
-              class="dropdown-button flex items-center space-x-2 py-2 px-3 border-2 border-white/0 text-base hover:border-b-blue-500 hover:bg-blue-100/50 hover:cursor-pointer rounded"
+              class="dropdown-button flex items-center justify-center space-x-2 py-2 px-3 border-2 border-white/0 text-base hover:border-b-blue-500 hover:bg-blue-100/50 hover:cursor-pointer rounded"
               type="button">
-              <span class="text-sm font-semi-bold">Colecciones</span>
+              <span class="text-sm">Colecciones</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M7.63729 10.8472L3.48359 6.6935C3.28326 6.49317 3.28326 6.16839 3.48359 5.96808L3.96805 5.48362C4.16804 5.28363 4.49216 5.28324 4.69262 5.48276L8.00002 8.77466L11.3074 5.48276C11.5079 5.28324 11.832 5.28363 12.032 5.48362L12.5164 5.96808C12.7168 6.16841 12.7168 6.49319 12.5164 6.6935L8.36272 10.8472C8.16241 11.0475 7.83762 11.0475 7.63729 10.8472Z">
@@ -67,8 +75,8 @@
             </button>
 
             <div class="dropdown-menu hidden">
-              <ul class="bg-white shadow-lg flex flex-col py-1 absolute top-full right-0 rounded-md"
-                style="min-width: 150px;" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+              <ul class="bg-white shadow-lg flex flex-col py-1 absolute top-full right-0 rounded-md w-36"
+                role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                 <li>
                   <a class="flex text-black cursor-pointer text-sm leading-5 py-2 px-3 select-none hover:bg-blue-50"
                     href="#" role="menuitem">Listas</a>
@@ -97,9 +105,9 @@
 
         <div class="dropdown flex relative">
           <button
-            class="dropdown-button flex items-center py-2 px-3 border-2 border-black bg-white hover:bg-black text-black hover:text-white text-base rounded space-x-2"
+            class="dropdown-button flex items-center py-2 px-3 border-2 border-blue-700 bg-blue-700 hover:bg-blue-800 text-white text-base rounded space-x-2 transition-all"
             type="button">
-            <span class="text-sm font-semi-bold">Usuario</span>
+            <span class="text-sm font-semi-bold">Acceder</span>
           </button>
 
           <div class="dropdown-menu hidden">
@@ -123,7 +131,7 @@
 
       </header>
 
-      <main>
+      <main class="h-full w-full">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
       </main>
     </div>
