@@ -17,7 +17,11 @@ namespace master_form
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            Session["userName"] = null;
+            Session["userEmail"] = null;
+            Session["userPhoneNumber"] = null;
+            Session["userProfilePhoto"] = null;
+            Session["userRole"] = null;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
