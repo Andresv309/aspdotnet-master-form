@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Layouts/Main.Master" AutoEventWireup="true" CodeBehind="CodeLab.master.cs" Inherits="master_form.Views.Layouts.CodeLab" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
+  <asp:ContentPlaceHolder ID="HeadPlaceHolderExample" runat="server"></asp:ContentPlaceHolder>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+  <script src="../Js/editor.js"></script>
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+  
+  <div class="grid grid-cols-2 gap-12 w-full h-[calc(100vh-3.5rem)] max-h-[calc(100vh-3.5rem)] py-8">
+
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderExample" runat="server"></asp:ContentPlaceHolder>
+
+
+    <div class="max-h-full w-full h-full flex flex-col gap-4 p-4">
+
+      <h1 class="text-2xl font-semibold tracking-tight text-neutral-950 sm:text-3xl">
+        Vamos a la <span class="text-orange-600">Práctica</span>
+      </h1>
+   
+
+        <div class="flex flex-col">
+          <div id="editor" class="w-full h-80"> 
+            <div id="jsMonacoEditor" class="w-full h-80"></div>
+          </div>
+    
+          <div class="flex flex-col justify-center items-center w-full h-full mt-4">
+            <div class="bg-slate-400/50 p-2 w-full">
+              <span class="font-semibold text-sm">
+                Salida:
+              </span>
+            </div>
+            <pre class="flex flex-grow justify-center items-center w-full min-h-[8rem]">
+
+              <code class="rounded-b-lg p-6 overflow-y-scroll scrollbar-style text-gray-400 bg-neutral-800 w-full h-full max-h-48" id="codeOutput"></code>
+
+            </pre>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+</asp:Content>
