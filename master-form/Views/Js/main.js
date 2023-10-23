@@ -1,4 +1,4 @@
-
+﻿
 const dropdowns = document.querySelectorAll(".dropdown");
 
 document.addEventListener("click", (event) => {

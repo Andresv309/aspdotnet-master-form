@@ -1,6 +1,6 @@
 
 
-body {
+body, .scrollbar-style {
   --sb-track-color: #FFFFFF;
   --sb-thumb-color: rgb(37 99 235 / 0.9);
   --sb-size: 10px;
@@ -9,16 +9,19 @@ body {
                    var(--sb-track-color);
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.scrollbar-style::-webkit-scrollbar {
   width: var(--sb-size) 
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.scrollbar-style::-webkit-scrollbar {
   background: var(--sb-track-color);
   border-radius: 4px;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.scrollbar-style::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 4px;
 }
@@ -36,7 +39,10 @@ input[type=number] {
   appearance: none;
 }
 
-
+.textbox::selection {
+  background: rgba(30,0,149,.188);
+  color: #7e46b3;
+}
 
 /* Grainy background style */
 .grainy {
