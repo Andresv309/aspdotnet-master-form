@@ -1,4 +1,5 @@
-﻿using System;
+﻿using master_form.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,7 +13,13 @@ namespace master_form.Views.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if ((Session["userRole"] is null) || Session["userRole"].ToString() != UserRole.Admin.ToString())
+            {
+                Response.Redirect("Login.aspx");
+            }
+
             fileUploadSectionEdition.Visible = false;
+            fileStatus.Text = "";
         }
 
         protected void fileUploadButton_Click(object sender, EventArgs e)
@@ -21,6 +28,8 @@ namespace master_form.Views.Pages
             {
                 fileUploadSectionLoad.Visible = false;
                 fileUploadSectionEdition.Visible = true;
+                fileStatus.Text = "";
+
 
                 fileName.Text = fileUpload.FileName;
 

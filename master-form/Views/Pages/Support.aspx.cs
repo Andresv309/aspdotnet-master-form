@@ -13,7 +13,18 @@ namespace master_form.Views.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if ((Session["userRole"] is null) || Session["userRole"].ToString() != UserRole.Client.ToString())
+            {
+                Response.Redirect("Login.aspx");
+            }
 
+
+            if (Session["userName"] != null)
+            {
+                formPersonName.Text = Session["userName"].ToString();
+                formPersonEmail.Text = Session["userEmail"].ToString();
+                formPersonPhone.Text = Session["userPhoneNumber"].ToString();
+            }
         }
 
         protected void formSubmit_Click(object sender, EventArgs e)

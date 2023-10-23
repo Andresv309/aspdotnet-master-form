@@ -33,6 +33,15 @@ namespace master_form.Views.Pages
         protected global::System.Web.UI.WebControls.FileUpload fileUpload;
 
         /// <summary>
+        /// fileStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fileStatus;
+
+        /// <summary>
         /// fileUploadButton control.
         /// </summary>
         /// <remarks>
@@ -51,15 +60,6 @@ namespace master_form.Views.Pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl fileUploadSectionEdition;
 
         /// <summary>
-        /// fileUploadSectionClose control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button fileUploadSectionClose;
-
-        /// <summary>
         /// fileName control.
         /// </summary>
         /// <remarks>
@@ -69,13 +69,13 @@ namespace master_form.Views.Pages
         protected global::System.Web.UI.WebControls.Label fileName;
 
         /// <summary>
-        /// fileStatus control.
+        /// fileUploadSectionClose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fileStatus;
+        protected global::System.Web.UI.WebControls.Button fileUploadSectionClose;
 
         /// <summary>
         /// fileData control.
