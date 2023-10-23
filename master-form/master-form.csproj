@@ -68,24 +68,80 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Views\Js\editor.js" />
+    <Content Include="Views\Js\main.js" />
+    <Content Include="Views\Pages\ArrayList.aspx" />
+    <Content Include="Views\Pages\Conditionals.aspx" />
+    <Content Include="Views\Pages\ForLoop.aspx" />
+    <Content Include="Views\Pages\Lists.aspx" />
+    <Content Include="Views\Pages\Login.aspx" />
     <Content Include="Views\Pages\Repository.aspx" />
     <Content Include="Views\Pages\Support.aspx" />
     <Content Include="Views\Pages\Index.aspx" />
+    <Content Include="Views\Pages\Vectors.aspx" />
+    <Content Include="Views\Pages\WhileLoop.aspx" />
+    <Content Include="Views\Public\favicon.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\LoginValidation.cs" />
     <Compile Include="Entities\EmailForm.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserCredentials.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EmailSenderDotNet.cs" />
+    <Compile Include="Views\Layouts\CodeLab.master.cs">
+      <DependentUpon>CodeLab.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Layouts\CodeLab.master.designer.cs">
+      <DependentUpon>CodeLab.master</DependentUpon>
+    </Compile>
     <Compile Include="Views\Layouts\Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Layouts\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ArrayList.aspx.cs">
+      <DependentUpon>ArrayList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\ArrayList.aspx.designer.cs">
+      <DependentUpon>ArrayList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Conditionals.aspx.cs">
+      <DependentUpon>Conditionals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Conditionals.aspx.designer.cs">
+      <DependentUpon>Conditionals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ForLoop.aspx.cs">
+      <DependentUpon>ForLoop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\ForLoop.aspx.designer.cs">
+      <DependentUpon>ForLoop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Lists.aspx.cs">
+      <DependentUpon>Lists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Lists.aspx.designer.cs">
+      <DependentUpon>Lists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\Repository.aspx.cs">
       <DependentUpon>Repository.aspx</DependentUpon>
@@ -108,10 +164,26 @@
     <Compile Include="Views\Pages\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\Vectors.aspx.cs">
+      <DependentUpon>Vectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\Vectors.aspx.designer.cs">
+      <DependentUpon>Vectors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\WhileLoop.aspx.cs">
+      <DependentUpon>WhileLoop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\WhileLoop.aspx.designer.cs">
+      <DependentUpon>WhileLoop.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Layouts\Main.Master" />
+    <Content Include="Views\Layouts\CodeLab.master" />
+    <None Include="Views\Pages\.editorconfig" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,10 +191,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
